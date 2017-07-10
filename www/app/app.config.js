@@ -12,27 +12,19 @@ angular.module('Player')
   $stateProvider
 
   // setup an abstract state for the tabs directive
-    .state('tab', {
-    url: '/tab',
-    abstract: true,
-    templateUrl: 'templates/tabs.html'
-  })
+    .state('find', {
+      url: '/find',
+      templateUrl: 'App/find/find.html',
+      controller: 'FindController',
+      controllerAs: 'vm'
+    });
 
   // Each tab has its own nav history stack:
 
-  .state('tab.dash', {
-    url: '/dash',
-    views: {
-      'tab-dash': {
-        templateUrl: 'templates/tab-dash.html',
-        controller: 'PlayerCtrl'
-      }
-    }
-  });
 
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/tab/dash');
-  $ionicConfigProvider.tabs.position('bottom');
+  $urlRouterProvider.otherwise('/find');
+  //$ionicConfigProvider.tabs.position('bottom');
 });
 
 })();

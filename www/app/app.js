@@ -1,6 +1,6 @@
 (function () {
     'use strict';
 
-     angular.module('Player', ['ionic', 'Player.controllers', 'Player.services']);
+     angular.module('Player', ['ionic']);
 
 })();
