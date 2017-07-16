@@ -11,7 +11,8 @@
             getEditorialData: getEditorialData
         };*/
         var service = {
-          getSongs : getSongs
+          getSongs : getSongs,
+          createPushotification: createPushotification
         };
 
         function getSongs() {
@@ -27,15 +28,21 @@
           });
 
         }
-        /*function getUsers(){
-        	return $http.get('https://jsonplaceholder.typicode.com/users')
-	        	.then(function(response){
-	        		return response.data;
-	        	})
-	        	.catch(function(){
-	        		console.log('Error');
-	        	});
-        }*/
+
+        function createPushotification(token, image, song_name){
+          console.log("Sending: "+token + image + song_name);
+          return $http({
+            method : "POST",
+            url : API.push_url + '/self-push',
+            data: {'token': token, 'image': image, 'song_name': song_name}
+          })
+          .then(function (response) {
+            return response;
+          })
+          .catch(function (error) {
+            console.log("ERROR ON PUSH");
+          });
+        }
 
         return service;
     }

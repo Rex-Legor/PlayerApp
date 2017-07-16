@@ -1,0 +1,10 @@
+<ion-view>
+  <ion-content class="padding">
+    <div class="item item-image">
+      <img ng-src="{{vm.song.image_large}}" alt="">
+      <h2>{{vm.song.title}}</h2>
+      <p>{{vm.song.artist}}</p>
+      <a ng-click="vm.openUrl(vm.song.open_url)" class="button button-icon ion-play"> Play song on Spotify</a>
+    </div>
+  </ion-content>
+</ion-view>

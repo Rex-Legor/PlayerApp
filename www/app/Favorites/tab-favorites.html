@@ -1,0 +1,11 @@
+<ion-view>
+  <ion-content class="padding">
+    <ion-list>
+      <ion-item class="item item-thumbnail-left"  ng-repeat="song in favoritos" href="#/tab/song/{{$index}}">
+        <img ng-src="{{song.image_large}}" alt="">
+        <h2>{{song.title}}</h2>
+        <p>{{song.artist}}</p>
+      </ion-item>
+    </ion-item>
+  </ion-content>
+</ion-view>

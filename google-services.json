@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "639324135931",
+    "firebase_url": "https://sciotraining-1d596.firebaseio.com",
+    "project_id": "sciotraining-1d596",
+    "storage_bucket": "sciotraining-1d596.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:639324135931:android:d7509fac31ae6935",
+        "android_client_info": {
+          "package_name": "com.playerApp.Rex"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "639324135931-cibd8aevdktijf9g77euh2i2u034e9qa.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDuMjba77uOtGvWdRGWTZafdPCOt2bZyqQ"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

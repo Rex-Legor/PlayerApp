@@ -17,6 +17,21 @@ angular.module('Player')
     }
 
     $rootScope.favoritos = [];
+    $rootScope.token = null;
+
+    FCMPlugin.getToken(function(token){
+        $rootScope.token = token;
+    });
+
+      FCMPlugin.onNotification(function(data){
+        if(data.wasTapped){
+          //Notification was received on device tray and tapped by the user.
+          alert( data.body );
+        }else{
+          //Notification was received in foreground. Maybe the user needs to be notified.
+          alert( data.body );
+        }
+    });
   });
 });
 
